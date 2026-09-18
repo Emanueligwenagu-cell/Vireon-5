@@ -1,0 +1,21 @@
+.venv/
+venv/
+env/
+
+# Local environment and secrets
+.env
+backend/.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Django generated files
+backend/staticfiles/
+backend/media/
+*.sqlite3
+*.log
+
+# IDE and OS files
+.vscode/
+.DS_Store
