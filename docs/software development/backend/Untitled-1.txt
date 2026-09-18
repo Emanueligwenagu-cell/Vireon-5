@@ -1,5 +1,0 @@
-cd /d C:\Users\Admin\OneDrive\Ibotwe_FoodOrdering_System
-py -3.12 -m venv .venv
-.venv\Scripts\activate
-python -m pip install --upgrade pip
-python -m pip install -r backend\requirements.txt
