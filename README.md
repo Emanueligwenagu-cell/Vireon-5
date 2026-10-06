@@ -28,9 +28,9 @@ This application allows students to:
 - Dlula Anelisa 222547642
 
 ## 🛠️ Technologies (Planned)
-- Frontend: HTML, CSS 
-- Backend: Python
-- Database: MySQL
+- Frontend: HTML, CSS, JavaScript
+- Backend: Python, Django
+- Database: MySQL, SQLite
 - Version Control: Git/GitHub
 
 ## 📅 Project Status
