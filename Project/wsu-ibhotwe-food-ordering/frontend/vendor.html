@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Ibhotwe - Vendor</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260913b">
+</head>
+
+<body data-page="vendor">
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="nav-logo" href="home.html">
+                    <div class="nav-logo-icon">🍲</div>
+                    <div>
+                        <div class="nav-logo-text">Ibhotwe</div>
+                        <div class="nav-logo-sub">Campus Food</div>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a class="nav-link" data-page="home" href="home.html">🏠 Home</a>
+                    <a class="nav-link" data-page="browse" href="browse.html">🍽️ Browse</a>
+                    <a class="nav-link" data-page="orders" href="orders.html">📦 My Orders</a>
+                    <a class="nav-link" data-page="vendor" href="vendor.html">👨‍🍳 Vendor</a>
+                    <a class="nav-link" data-page="game" href="game.html">🎮 Play</a>
+                </div>
+                <div class="nav-right"><a class="cart-btn" href="cart.html" aria-label="Cart">🛒<span class="cart-badge"
+                            id="cart-badge" style="display:none">0</span></a>
+                    <div class="profile-wrap">
+                        <div class="profile-btn" id="profile-btn" onclick="toggleProfileDropdown()">?</div>
+                        <div class="dropdown" id="profile-dropdown" style="display:none">
+                            <div class="dropdown-header">
+                                <div class="name" id="dd-name">Guest</div>
+                                <div class="email" id="dd-email"></div>
+                                <div class="pts" id="dd-pts"></div>
+                            </div>
+                            <a class="dropdown-item" href="orders.html">📦 My Orders</a><button
+                                class="dropdown-item danger" onclick="handleLogout()">🚪 Sign Out</button>
+                        </div>
+                    </div>
+                    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobile-menu"><a class="mobile-nav-link" href="home.html">🏠 Home</a><a
+                    class="mobile-nav-link" href="browse.html">🍽️ Browse Food</a><a class="mobile-nav-link"
+                    href="orders.html">📦 My Orders</a><a class="mobile-nav-link" href="vendor.html">👨‍🍳 Vendor</a><a
+                    class="mobile-nav-link" href="game.html">🎮 Play Game</a><button class="mobile-nav-link"
+                    style="color:var(--red,#ef4444);text-align:left;width:100%" onclick="handleLogout()">🚪 Sign
+                    Out</button></div>
+        </div>
+    </nav>
+    <div id="vendor-page" class="page active"></div>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand"><span class="footer-brand-icon">🍲</span><span
+                        class="footer-brand-name">Ibhotwe</span><span class="footer-brand-sub">Campus Food
+                        Platform</span></div>
+                <p class="footer-copy">© 2026 Ibhotwe · Fast, Fresh & Campus-Made · Built for students</p>
+                <div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Help</a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="add-item-modal">
+        <div class="modal">
+            <h3>Add New Menu Item</h3>
+            <div class="form-group mb-12"><label class="label">Item Name *</label><input class="input"
+                    id="new-item-name" placeholder="e.g. Spicy Chicken Wrap" /></div>
+            <div class="form-group mb-12"><label class="label">Description</label><textarea class="textarea"
+                    id="new-item-desc" rows="2"></textarea></div>
+            <div class="modal-grid mb-12">
+                <div class="form-group"><label class="label">Price (R) *</label><input type="number" class="input"
+                        id="new-item-price" /></div>
+                <div class="form-group"><label class="label">Prep Time (min)</label><input type="number" class="input"
+                        id="new-item-prep" placeholder="15" /></div>
+            </div>
+            <div class="form-group"><label class="label">Category</label><select class="select" id="new-item-cat">
+                    <option value="traditional">Traditional</option>
+                    <option value="fast-food">Fast Food</option>
+                    <option value="healthy">Healthy</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="pizza">Pizza</option>
+                </select></div>
+            <div class="modal-footer"><button class="btn btn-secondary btn-full"
+                    onclick="closeAddModal()">Cancel</button><button class="btn btn-primary btn-full"
+                    onclick="confirmAddItem()">Add Item</button></div>
+        </div>
+    </div>
+    <script src="js/data.js?v=20260913b"></script>
+    <script src="js/state.js?v=20260913b"></script>
+    <script src="js/utils.js?v=20260913b"></script>
+    <script src="js/components.js?v=20260913b"></script>
+    <script src="js/nav.js?v=20260913b"></script>
+    <script src="js/pages/vendor.js?v=20260913b"></script>
+    <script src="js/app.js?v=20260913b"></script>
+</body>
+
+</html>

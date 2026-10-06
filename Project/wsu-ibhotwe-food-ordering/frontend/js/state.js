@@ -1,0 +1,35 @@
+let state = {
+  currentPage: document.body?.dataset?.page || 'home',
+  user: null,
+  cart: JSON.parse(localStorage.getItem('ibhotwe_cart') || '[]'),
+  orders: [],
+  activePromo: null,
+  orderPlaced: null,
+  activeCategory: 'all',
+  searchQuery: '',
+  priceMax: 200,
+  minRating: 0,
+  sortBy: 'popular',
+  filtersOpen: false,
+  cartPayment: 'mobile',
+  promoInput: '',
+  promoError: '',
+  promoOk: false,
+  orderFilter: 'all',
+  expandedOrders: {},
+  vendorTab: 'overview',
+  vendorOpen: true,
+  vendorMenuItems: [],
+  loginTab: 'login',
+  loginRole: 'student',
+  regRole: 'student',
+  showPw: false,
+  loginData: { email: '', password: '' },
+  regData: { name: '', email: '', password: '', studentNumber: '', campus: 'Main Campus' },
+  authError: '',
+  game: {
+    board: Array(9).fill(null), current: 'X', mode: 'pvp', difficulty: 'medium',
+    scores: { X: 0, O: 0, draw: 0 }, gameOver: false, winner: null, winCombo: null, thinking: false
+  }
+};
+function persistCart() { localStorage.setItem('ibhotwe_cart', JSON.stringify(state.cart)); }
