@@ -39,3 +39,4 @@ This application allows students to:
 - Phase 3: Features, scenarios and user story
 - Phase 4: Architectural Design
 - Phase 5: Software Development
+- Phase 6: Completed 
